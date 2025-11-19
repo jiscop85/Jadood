@@ -54,3 +54,15 @@ const AdminLayout = () => {
             </Link>
           ))}
         </nav>
+
+ <div className="p-4 border-t border-border">
+          <div className="mb-3 px-4 py-2 bg-muted rounded-lg">
+            <p className="text-xs text-muted-foreground">ایمیل</p>
+            <p className="text-sm font-medium truncate">{user?.email}</p>
+          </div>
+          <Button variant="outline" className="w-full justify-start gap-2" onClick={signOut}>
+            <LogOut className="w-4 h-4" />
+            خروج
+          </Button>
+        </div>
+      </aside>
