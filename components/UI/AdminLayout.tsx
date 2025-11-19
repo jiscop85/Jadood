@@ -24,3 +24,16 @@ const AdminLayout = () => {
     { path: '/admin/categories', icon: FolderTree, label: 'دسته‌بندی‌ها' },
     { path: '/admin/users', icon: Users, label: 'کاربران' },
   ];
+
+ return (
+    <div className="min-h-screen bg-background flex">
+      {/* Sidebar */}
+      <aside className="w-64 bg-card border-r border-border flex flex-col">
+        <div className="p-6 border-b border-border">
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center glow-effect">
+              <Cigarette className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-xl font-bold gradient-text">Jadood Admin</span>
+          </Link>
+        </div>
