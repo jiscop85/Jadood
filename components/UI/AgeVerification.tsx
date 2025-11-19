@@ -5,3 +5,10 @@ import { AlertCircle } from "lucide-react";
 
 const AgeVerification = () => {
   const [open, setOpen] = useState(false);
+
+ useEffect(() => {
+    const verified = localStorage.getItem("ageVerified");
+    if (!verified) {
+      setOpen(true);
+    }
+  }, []);
