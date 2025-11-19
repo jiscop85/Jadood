@@ -12,3 +12,13 @@ const AgeVerification = () => {
       setOpen(true);
     }
   }, []);
+
+
+  const handleVerify = (isAdult: boolean) => {
+    if (isAdult) {
+      localStorage.setItem("ageVerified", "true");
+      setOpen(false);
+    } else {
+      window.location.href = "https://google.com";
+    }
+  };
