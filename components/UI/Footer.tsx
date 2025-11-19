@@ -99,3 +99,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+    <div className="border-t border-border mt-8 pt-8 text-center">
+          <p className="text-muted-foreground text-sm">
+            © 2026 Jadood. تمامی حقوق محفوظ است | این سایت فقط برای افراد بالای 18 سال است
+          </p>
+        </div>
+      </div>
+    </footer>;
+};
+export default Footer;
