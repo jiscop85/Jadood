@@ -43,3 +43,30 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+ {/* Customer Service */}
+          <div>
+            <h3 className="font-bold mb-4 text-foreground">خدمات مشتریان</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  قوانین و مقررات
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  حریم خصوصی
+                </Link>
+              </li>
+              <li>
+                <Link to="/shipping" className="text-muted-foreground hover:text-primary transition-colors">
+                  ارسال و تحویل
+                </Link>
+              </li>
+              <li>
+                <Link to="/returns" className="text-muted-foreground hover:text-primary transition-colors">
+                  بازگشت کالا
+                </Link>
+              </li>
+            </ul>
+          </div>
