@@ -88,3 +88,14 @@ const Footer = () => {
                 <span className="text-sm">تهران - چهار راه مولوی - بازار حضرتی - کوچه موسوی - (ارامنه) پاساژ صفویه - پلاک 21                                            </span>
               </li>
             </ul>
+
+<div className="flex gap-3 mt-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-muted hover:bg-primary transition-colors flex items-center justify-center">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-muted hover:bg-primary transition-colors flex items-center justify-center">
+                <Send className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
