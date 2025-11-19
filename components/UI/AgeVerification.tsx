@@ -22,3 +22,11 @@ const AgeVerification = () => {
       window.location.href = "https://google.com";
     }
   };
+
+  return (
+    <Dialog open={open} onOpenChange={() => {}}>
+      <DialogContent className="sm:max-w-md [&>button]:hidden">
+        <div className="text-center space-y-6 py-4">
+          <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+            <AlertCircle className="w-10 h-10 text-primary" />
+          </div>
