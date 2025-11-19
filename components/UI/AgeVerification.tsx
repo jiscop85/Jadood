@@ -30,3 +30,13 @@ const AgeVerification = () => {
           <div className="w-20 h-20 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
             <AlertCircle className="w-10 h-10 text-primary" />
           </div>
+
+ <div className="space-y-2">
+            <h2 className="text-2xl font-bold">تایید سن</h2>
+            <p className="text-muted-foreground">
+              آیا شما بالای 18 سال سن دارید؟
+            </p>
+            <p className="text-sm text-muted-foreground">
+              محصولات این سایت فقط برای افراد بالای 18 سال قابل خرید است
+            </p>
+          </div>
