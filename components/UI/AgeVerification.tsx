@@ -40,3 +40,26 @@ const AgeVerification = () => {
               محصولات این سایت فقط برای افراد بالای 18 سال قابل خرید است
             </p>
           </div>
+
+ <div className="flex gap-4 pt-4">
+            <Button 
+              onClick={() => handleVerify(true)}
+              className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+            >
+              بله، بالای 18 سال هستم
+            </Button>
+            <Button 
+              variant="outline" 
+              onClick={() => handleVerify(false)}
+              className="flex-1"
+            >
+              خیر
+            </Button>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export default AgeVerification;
