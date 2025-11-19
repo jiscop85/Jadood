@@ -70,3 +70,21 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+  {/* Contact Info */}
+          <div>
+            <h3 className="font-bold mb-4 text-foreground">تماس با ما</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <Phone className="w-4 h-4 text-primary" />
+                <span className="text-sm">09336236112 _ 09101754308</span>
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <Mail className="w-4 h-4 text-primary" />
+                <span className="text-sm">arash.javadyfar@gmail.com</span>
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span className="text-sm">تهران - چهار راه مولوی - بازار حضرتی - کوچه موسوی - (ارامنه) پاساژ صفویه - پلاک 21                                            </span>
+              </li>
+            </ul>
