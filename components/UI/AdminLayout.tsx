@@ -37,3 +37,20 @@ const AdminLayout = () => {
             <span className="text-xl font-bold gradient-text">Jadood Admin</span>
           </Link>
         </div>
+
+  <nav className="flex-1 p-4 space-y-2">
+          {menuItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
+                isActive(item.path)
+                  ? 'bg-primary text-white'
+                  : 'hover:bg-muted text-foreground'
+              }`}
+            >
+              <item.icon className="w-5 h-5" />
+              <span className="font-medium">{item.label}</span>
+            </Link>
+          ))}
+        </nav>
