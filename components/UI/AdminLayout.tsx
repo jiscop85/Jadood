@@ -66,3 +66,13 @@ const AdminLayout = () => {
           </Button>
         </div>
       </aside>
+
+{/* Main Content */}
+      <main className="flex-1 overflow-auto">
+        <Outlet />
+      </main>
+    </div>
+  );
+};
+
+export default AdminLayout;
