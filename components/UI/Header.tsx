@@ -51,3 +51,22 @@ const Header = () => {
             </div>
             <span className="font-bold gradient-text text-gray-50 font-serif text-2xl">Jadood</span>
           </Link>
+
+ {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              خانه
+            </Link>
+            <Link to="/products" className="text-foreground hover:text-primary transition-colors font-medium">
+              محصولات
+            </Link>
+            <Link to="/categories" className="text-foreground hover:text-primary transition-colors font-medium">
+              دسته‌بندی‌ها
+            </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              درباره ما
+            </Link>
+            <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              تماس با ما
+            </Link>
+          </nav>
