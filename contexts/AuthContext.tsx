@@ -80,3 +80,15 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     });
     return { error };
   };
+
+  const signOut = async () => {
+    await supabase.auth.signOut();
+    navigate('/');
+  };
+
+  return (
+    <AuthContext.Provider value={{ user, session, loading, signIn, signUp, signOut, isAdmin }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
