@@ -46,3 +46,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         }
       }
     );
+
+// Check for existing session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      setLoading(false);
+    });
