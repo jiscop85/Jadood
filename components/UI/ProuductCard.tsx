@@ -41,3 +41,19 @@ const ProductCard = ({ id, name, price, image, category, isNew }: ProductCardPro
           </h3>
         </Link>
         
+ <div className="flex items-center justify-between pt-2">
+          <div className="text-xl font-bold gradient-text">{price} تومان</div>
+          <Button 
+            size="icon" 
+            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 glow-effect"
+          >
+            <ShoppingCart className="w-4 h-4" />
+          </Button>
+        </div>
+      </div>
+    </Card>
+  );
+};
+
+export default ProductCard;
+
