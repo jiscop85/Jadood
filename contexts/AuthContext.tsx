@@ -38,3 +38,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
               .eq('user_id', session.user.id)
               .eq('role', 'admin')
               .maybeSingle();
+
+            setIsAdmin(!!data);
+          }, 0);
+        } else {
+          setIsAdmin(false);
+        }
+      }
+    );
