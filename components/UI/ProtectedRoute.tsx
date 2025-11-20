@@ -16,3 +16,14 @@ export const ProtectedRoute = ({ children, requireAdmin = false }: ProtectedRout
       </div>
     );
   }
+
+if (!user) {
+    return <Navigate to="/auth" />;
+  }
+
+  if (requireAdmin && !isAdmin) {
+    return <Navigate to="/" />;
+  }
+
+  return <>{children}</>;
+};
