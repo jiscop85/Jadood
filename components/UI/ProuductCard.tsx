@@ -32,3 +32,12 @@ const ProductCard = ({ id, name, price, image, category, isNew }: ProductCardPro
           </button>
         </div>
       </Link>
+
+       <div className="p-4 space-y-3">
+        <div className="text-xs text-primary font-medium">{category}</div>
+        <Link to={`/product/${id}`}>
+          <h3 className="font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+            {name}
+          </h3>
+        </Link>
+        
