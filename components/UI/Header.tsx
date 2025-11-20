@@ -107,3 +107,34 @@ const Header = () => {
                   ورود / ثبت‌نام
                 </Button>
               </Link>}
+
+<Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Menu className="w-5 h-5" />
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && <nav className="md:hidden py-4 border-t border-border">
+            <div className="flex flex-col gap-4">
+              <Link to="/" className="text-foreground hover:text-primary transition-colors font-medium">
+                خانه
+              </Link>
+              <Link to="/products" className="text-foreground hover:text-primary transition-colors font-medium">
+                محصولات
+              </Link>
+              <Link to="/categories" className="text-foreground hover:text-primary transition-colors font-medium">
+                دسته‌بندی‌ها
+              </Link>
+              <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+                درباره ما
+              </Link>
+              <Link to="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+                تماس با ما
+              </Link>
+            </div>
+          </nav>}
+      </div>
+    </header>;
+};
+export default Header;
