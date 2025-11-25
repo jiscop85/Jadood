@@ -22,3 +22,10 @@ const Products = () => {
       category: "پاد یکبار مصرف",
       isNew: true,
     },
+{
+      id: "3",
+      name: "IQOS 3 DUO Premium Kit",
+      price: "4,200,000",
+      image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=500&q=80",
+      category: "سیگار الکترونیکی",
+    },
