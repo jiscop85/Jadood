@@ -73,3 +73,14 @@ const Cart = () => {
       .from('cart')
       .update({ quantity: newQuantity })
       .eq('id', itemId);
+
+if (error) {
+      toast({
+        title: 'خطا',
+        description: 'خطا در بروزرسانی تعداد',
+        variant: 'destructive',
+      });
+    } else {
+      fetchCartItems();
+    }
+  };
