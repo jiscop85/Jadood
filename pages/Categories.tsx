@@ -85,3 +85,29 @@ const Categories = () => {
                       {category.icon}
                     </div>
                   </div>
+
+ <div className="p-6">
+                    <div className="flex items-start justify-between mb-2">
+                      <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                        {category.name}
+                      </h2>
+                      <ArrowLeft className="w-6 h-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    
+                    <p className="text-muted-foreground mb-4">
+                      {category.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between pt-4 border-t border-border">
+                      <span className="text-sm text-muted-foreground">
+                        {category.count} محصول
+                      </span>
+                      <span className="text-primary font-medium">
+                        مشاهده همه ←
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
