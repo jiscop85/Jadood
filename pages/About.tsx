@@ -80,3 +80,10 @@ const About = () => {
           </div>
         </div>
       </div>
+
+  <Footer />
+    </div>
+  );
+};
+
+export default About;
