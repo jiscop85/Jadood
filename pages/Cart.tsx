@@ -139,3 +139,23 @@ if (error) {
       </div>
     );
   }
+
+ return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1 container mx-auto px-4 pt-32 pb-20">
+        <h1 className="text-3xl font-bold gradient-text mb-8">سبد خرید شما</h1>
+
+        {cartItems.length === 0 ? (
+          <div className="text-center py-20">
+            <ShoppingBag className="w-20 h-20 mx-auto text-muted-foreground mb-4" />
+            <h2 className="text-2xl font-bold mb-4">سبد خرید شما خالی است</h2>
+            <Button onClick={() => navigate('/products')}>مشاهده محصولات</Button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-4">
+              {cartItems.map((item) => {
+                if (!item.products) return null;
+                
