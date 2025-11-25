@@ -60,3 +60,12 @@ const About = () => {
                 <h3 className="text-2xl font-bold mb-2">100% اصالت</h3>
                 <p className="text-muted-foreground">گارانتی اصل بودن کالا</p>
               </div>
+
+ <div className="bg-card border border-border rounded-2xl p-8 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Heart className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">پشتیبانی 24/7</h3>
+                <p className="text-muted-foreground">همیشه در کنار شما</p>
+              </div>
+            </div>
