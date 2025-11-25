@@ -20,3 +20,18 @@ interface CartItem {
     stock_quantity: number;
   } | null;
 }
+
+const Cart = () => {
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (user) {
+      fetchCartItems();
+    } else {
+      setLoading(false);
+    }
+  }, [user]);
