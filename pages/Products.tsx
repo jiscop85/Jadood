@@ -36,3 +36,19 @@ const Products = () => {
       image: "https://images.unsplash.com/photo-1606400082777-ef05f37f7caf?w=500&q=80",
       category: "سیگار برگ",
     },
+ {
+      id: "5",
+      name: "Vaporesso XROS 3 Mini",
+      price: "1,200,000",
+      image: "https://images.unsplash.com/photo-1565514779301-c0bc49e6c2d2?w=500&q=80",
+      category: "ویپ",
+    },
+    {
+      id: "6",
+      name: "Lost Mary BM5000 - Strawberry Ice",
+      price: "920,000",
+      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=80",
+      category: "پاد یکبار مصرف",
+      isNew: true,
+    },
+  ];
