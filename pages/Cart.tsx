@@ -171,3 +171,32 @@ if (error) {
                           />
                         )}
                         
+ <div className="flex-1">
+                          <h3 className="text-lg font-bold mb-2">{item.products.name}</h3>
+                          <p className="text-primary font-bold mb-4">
+                            {item.products.price.toLocaleString('fa-IR')} تومان
+                          </p>
+                          
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                              <Button
+                                variant="outline"
+                                size="icon"
+                                className="h-8 w-8"
+                                onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                                disabled={item.quantity <= 1}
+                              >
+                                <Minus className="w-4 h-4" />
+                              </Button>
+                              <span className="w-12 text-center font-medium">{item.quantity}</span>
+                              <Button
+                                variant="outline"
+                                size="icon"
+                                className="h-8 w-8"
+                                onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                                disabled={item.quantity >= item.products.stock_quantity}
+                              >
+                                <Plus className="w-4 h-4" />
+                              </Button>
+                            </div>
+                            
