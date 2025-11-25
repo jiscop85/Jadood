@@ -52,3 +52,16 @@ const Products = () => {
       isNew: true,
     },
   ];
+
+ return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <div className="pt-32 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="mb-12">
+            <h1 className="text-5xl font-bold mb-4">
+              تمام <span className="gradient-text">محصولات</span>
+            </h1>
+            <p className="text-muted-foreground">بهترین برندهای جهان در یک جا</p>
+          </div>
