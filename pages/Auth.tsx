@@ -84,3 +84,25 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
           </CardHeader>
           
+ <CardContent>
+            <Tabs value={isLogin ? 'login' : 'signup'} onValueChange={(v) => setIsLogin(v === 'login')} className="w-full">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="login">ورود</TabsTrigger>
+                <TabsTrigger value="signup">ثبت‌نام</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="login">
+                <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">ایمیل</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="your@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      dir="ltr"
+                    />
+                  </div>
+                  
