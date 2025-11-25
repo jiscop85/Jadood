@@ -152,3 +152,17 @@ const handleSubmit = async (e: React.FormEvent) => {
                     />
                   </div>
                   
+<div className="space-y-2">
+                    <Label htmlFor="signup-password">رمز عبور</Label>
+                    <Input
+                      id="signup-password"
+                      type="password"
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                      minLength={6}
+                      dir="ltr"
+                    />
+                  </div>
+                  
