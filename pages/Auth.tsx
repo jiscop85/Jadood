@@ -20,3 +20,9 @@ const Auth = () => {
   const { signIn, signUp, user } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
+
+ // Redirect if already logged in
+  if (user) {
+    navigate('/');
+    return null;
+  }
