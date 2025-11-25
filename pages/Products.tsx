@@ -14,3 +14,11 @@ const Products = () => {
       category: "ویپ",
       isNew: true,
     },
+ {
+      id: "2",
+      name: "Elf Bar 5000 Puffs - Mixed Berry",
+      price: "850,000",
+      image: "https://images.unsplash.com/photo-1587328376107-c9d0e89d9717?w=500&q=80",
+      category: "پاد یکبار مصرف",
+      isNew: true,
+    },
