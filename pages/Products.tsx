@@ -87,3 +87,26 @@ const Products = () => {
                       ))}
                     </div>
                   </div>
+
+ <div className="border-t border-border pt-4">
+                    <h4 className="font-medium mb-2">محدوده قیمت</h4>
+                    <div className="space-y-2">
+                      <input 
+                        type="range" 
+                        min="0" 
+                        max="5000000" 
+                        className="w-full"
+                      />
+                      <div className="flex justify-between text-sm text-muted-foreground">
+                        <span>0</span>
+                        <span>5,000,000 تومان</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90">
+                    اعمال فیلتر
+                  </Button>
+                </div>
+              </div>
+            </div>
