@@ -200,3 +200,53 @@ if (error) {
                               </Button>
                             </div>
                             
+<Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => removeItem(item.id)}
+                            >
+                              <Trash2 className="w-4 h-4 text-destructive" />
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <div>
+              <Card className="glass-effect sticky top-32">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-bold">خلاصه سفارش</h3>
+                  
+                  <div className="space-y-2 pt-4 border-t border-border">
+                    <div className="flex justify-between">
+                      <span>جمع کل:</span>
+                      <span className="font-bold">
+                        {calculateTotal().toLocaleString('fa-IR')} تومان
+                      </span>
+                    </div>
+                  </div>
+
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    onClick={() => navigate('/checkout')}
+                  >
+                    ادامه خرید
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        )}
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Cart;
