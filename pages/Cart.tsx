@@ -84,3 +84,21 @@ if (error) {
       fetchCartItems();
     }
   };
+
+ const removeItem = async (itemId: string) => {
+    const { error } = await supabase
+      .from('cart')
+      .delete()
+      .eq('id', itemId);
+
+    if (error) {
+      toast({
+        title: 'خطا',
+        description: 'خطا در حذف محصول',
+        variant: 'destructive',
+      });
+    } else {
+      toast({ title: 'موفق', description: 'محصول از سبد خرید حذف شد' });
+      fetchCartItems();
+    }
+  };
