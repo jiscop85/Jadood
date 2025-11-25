@@ -159,3 +159,15 @@ if (error) {
               {cartItems.map((item) => {
                 if (!item.products) return null;
                 
+ return (
+                  <Card key={item.id} className="glass-effect">
+                    <CardContent className="p-6">
+                      <div className="flex gap-4">
+                        {item.products.image_url && (
+                          <img
+                            src={item.products.image_url}
+                            alt={item.products.name}
+                            className="w-24 h-24 object-cover rounded-lg"
+                          />
+                        )}
+                        
