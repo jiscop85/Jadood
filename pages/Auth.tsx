@@ -166,3 +166,19 @@ const handleSubmit = async (e: React.FormEvent) => {
                     />
                   </div>
                   
+  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? 'در حال ثبت‌نام...' : 'ثبت‌نام'}
+                  </Button>
+                </form>
+              </TabsContent>
+            </Tabs>
+          </CardContent>
+        </Card>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Auth;
