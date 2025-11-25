@@ -54,3 +54,34 @@ const Categories = () => {
       link: "/products?category=liquids",
     },
   ];
+
+ return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <div className="pt-32 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-4">
+              دسته‌بندی <span className="gradient-text">محصولات</span>
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              انتخاب از میان بیش از 300 محصول در 6 دسته مختلف
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category) => (
+              <Link key={category.name} to={category.link}>
+                <div className="group bg-card border border-border rounded-3xl overflow-hidden hover:border-primary/50 transition-all duration-300 card-hover">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+                    <div className="absolute bottom-4 right-4 text-5xl">
+                      {category.icon}
+                    </div>
+                  </div>
