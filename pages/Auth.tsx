@@ -138,3 +138,17 @@ const handleSubmit = async (e: React.FormEvent) => {
                       required
                     />
                   </div>
+
+ <div className="space-y-2">
+                    <Label htmlFor="signup-email">ایمیل</Label>
+                    <Input
+                      id="signup-email"
+                      type="email"
+                      placeholder="your@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      dir="ltr"
+                    />
+                  </div>
+                  
