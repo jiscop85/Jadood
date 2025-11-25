@@ -67,3 +67,20 @@ const handleSubmit = async (e: React.FormEvent) => {
       setLoading(false);
     }
   };
+
+ return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-background via-background to-muted/20">
+      <Header />
+      
+      <main className="flex-1 container mx-auto px-4 pt-32 pb-20 flex items-center justify-center">
+        <Card className="w-full max-w-md glass-effect border-border/50">
+          <CardHeader className="text-center space-y-4">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mx-auto glow-effect">
+              <Cigarette className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <CardTitle className="text-2xl gradient-text">به Jadood خوش آمدید</CardTitle>
+              <CardDescription>برای ادامه وارد شوید یا ثبت‌نام کنید</CardDescription>
+            </div>
+          </CardHeader>
+          
