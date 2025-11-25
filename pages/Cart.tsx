@@ -35,3 +35,29 @@ const Cart = () => {
       setLoading(false);
     }
   }, [user]);
+
+  const fetchCartItems = async () => {
+    if (!user) return;
+
+    const { data: cart } = await supabase
+      .from('cart')
+      .select('*')
+      .eq('user_id', user.id);
+
+    if (!cart) {
+      setLoading(false);
+      return;
+    }
+
+    // Fetch products separately
+    const itemsWithProducts = await Promise.all(
+      cart.map(async (item) => {
+        const { data: product } = await supabase
+          .from('products')
+          .select('id, name, price, image_url, stock_quantity')
+          .eq('id', item.product_id)
+          .maybeSingle();
+        
+        return { ...item, products: product };
+      })
+    );
