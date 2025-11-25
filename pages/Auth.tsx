@@ -106,3 +106,35 @@ const handleSubmit = async (e: React.FormEvent) => {
                     />
                   </div>
                   
+ <div className="space-y-2">
+                    <Label htmlFor="password">رمز عبور</Label>
+                    <Input
+                      id="password"
+                      type="password"
+                      placeholder="••••••••"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                      dir="ltr"
+                    />
+                  </div>
+                  
+                  <Button type="submit" className="w-full" disabled={loading}>
+                    {loading ? 'در حال ورود...' : 'ورود'}
+                  </Button>
+                </form>
+              </TabsContent>
+              
+              <TabsContent value="signup">
+                <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="fullName">نام کامل</Label>
+                    <Input
+                      id="fullName"
+                      type="text"
+                      placeholder="نام و نام خانوادگی"
+                      value={fullName}
+                      onChange={(e) => setFullName(e.target.value)}
+                      required
+                    />
+                  </div>
