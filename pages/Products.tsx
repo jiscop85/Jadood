@@ -65,3 +65,25 @@ const Products = () => {
             </h1>
             <p className="text-muted-foreground">بهترین برندهای جهان در یک جا</p>
           </div>
+
+<div className="flex flex-col lg:flex-row gap-8">
+            {/* Filters Sidebar */}
+            <div className="lg:w-64 space-y-6">
+              <div className="bg-card border border-border rounded-2xl p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Filter className="w-5 h-5 text-primary" />
+                  <h3 className="font-bold">فیلترها</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-medium mb-2">دسته‌بندی</h4>
+                    <div className="space-y-2">
+                      {["ویپ", "پاد یکبار مصرف", "سیگار الکترونیکی", "سیگار برگ"].map((cat) => (
+                        <label key={cat} className="flex items-center gap-2 cursor-pointer">
+                          <input type="checkbox" className="rounded border-border" />
+                          <span className="text-sm">{cat}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
