@@ -110,3 +110,32 @@ const Products = () => {
                 </div>
               </div>
             </div>
+
+ {/* Products Grid */}
+            <div className="flex-1">
+              <div className="flex items-center justify-between mb-6">
+                <p className="text-muted-foreground">{products.length} محصول یافت شد</p>
+                <select className="bg-card border border-border rounded-lg px-4 py-2">
+                  <option>جدیدترین</option>
+                  <option>پرفروش‌ترین</option>
+                  <option>ارزان‌ترین</option>
+                  <option>گران‌ترین</option>
+                </select>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {products.map((product) => (
+                  <ProductCard key={product.id} {...product} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Products;
