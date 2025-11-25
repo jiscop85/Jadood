@@ -29,3 +29,10 @@ const Products = () => {
       image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=500&q=80",
       category: "سیگار الکترونیکی",
     },
+ {
+      id: "4",
+      name: "Premium Cuban Cigars Set",
+      price: "1,800,000",
+      image: "https://images.unsplash.com/photo-1606400082777-ef05f37f7caf?w=500&q=80",
+      category: "سیگار برگ",
+    },
