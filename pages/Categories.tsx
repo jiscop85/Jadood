@@ -111,3 +111,24 @@ const Categories = () => {
               </Link>
             ))}
           </div>
+
+ {/* Popular Brands */}
+          <div className="mt-20">
+            <h2 className="text-3xl font-bold text-center mb-12">برندهای محبوب</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {["JUUL", "IQOS", "Elf Bar", "Lost Mary", "Vaporesso", "SMOK"].map((brand) => (
+                <div key={brand} className="bg-card border border-border rounded-2xl p-6 text-center hover:border-primary/50 transition-all card-hover">
+                  <h3 className="font-bold text-lg">{brand}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Categories;
