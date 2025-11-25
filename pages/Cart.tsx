@@ -102,3 +102,12 @@ if (error) {
       fetchCartItems();
     }
   };
+
+ const calculateTotal = () => {
+    return cartItems.reduce((sum, item) => {
+      if (item.products) {
+        return sum + (item.products.price * item.quantity);
+      }
+      return sum;
+    }, 0);
+  };
