@@ -61,3 +61,15 @@ const Cart = () => {
         return { ...item, products: product };
       })
     );
+
+ setCartItems(itemsWithProducts);
+    setLoading(false);
+  };
+
+  const updateQuantity = async (itemId: string, newQuantity: number) => {
+    if (newQuantity < 1) return;
+
+    const { error } = await supabase
+      .from('cart')
+      .update({ quantity: newQuantity })
+      .eq('id', itemId);
