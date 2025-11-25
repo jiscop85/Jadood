@@ -69,3 +69,14 @@ const About = () => {
                 <p className="text-muted-foreground">همیشه در کنار شما</p>
               </div>
             </div>
+
+<div className="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl p-8 md:p-12 text-center border border-primary/30">
+              <h2 className="text-3xl font-bold mb-4">مأموریت ما</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                ارائه بهترین تجربه خرید آنلاین برای محصولات دخانی با تضمین کیفیت، 
+                قیمت مناسب و خدمات عالی به مشتریان
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
