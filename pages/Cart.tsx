@@ -111,3 +111,19 @@ if (error) {
       return sum;
     }, 0);
   };
+
+ if (!user) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 container mx-auto px-4 pt-32 pb-20">
+          <div className="text-center py-20">
+            <ShoppingBag className="w-20 h-20 mx-auto text-muted-foreground mb-4" />
+            <h2 className="text-2xl font-bold mb-4">برای مشاهده سبد خرید وارد شوید</h2>
+            <Button onClick={() => navigate('/auth')}>ورود / ثبت‌نام</Button>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
