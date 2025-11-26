@@ -79,3 +79,6 @@ secondary: {
       },
     },
   },
+plugins: [require("tailwindcss-animate")],
+} satisfies Config;
+
