@@ -158,3 +158,23 @@ CREATE TABLE public.orders (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT now(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
+
+-- Enable RLS on orders
+ALTER TABLE public.orders ENABLE ROW LEVEL SECURITY;
+
+-- Orders policies
+CREATE POLICY "Users can view own orders"
+  ON public.orders FOR SELECT
+  USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can create own orders"
+  ON public.orders FOR INSERT
+  WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Admins can view all orders"
+  ON public.orders FOR SELECT
+  USING (public.has_role(auth.uid(), 'admin'));
+
+CREATE POLICY "Admins can update orders"
+  ON public.orders FOR UPDATE
+  USING (public.has_role(auth.uid(), 'admin'));
